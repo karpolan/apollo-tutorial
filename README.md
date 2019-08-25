@@ -8,4 +8,4 @@ Runs on NodeJS. Sources in `./server` folder.
 
 ## Client
 
-Built usin ReactJS. Sources in `./client` folder.
+Built using ReactJS. Sources in `./client` folder.
