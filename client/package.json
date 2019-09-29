@@ -1,10 +1,10 @@
 {
   "name": "apollo-tutorial-client",
-  "version": "1.0.3",
+  "version": "1.1.5",
   "description": "Based on official Apollo Engine tutorial",
   "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
   "license": "ISC",
-  "homepage": "https://apollo-tutorial-client.herokuapp.com",
+  "homepage": "https://apollo-tutorial.herokuapp.com/",
   "dependencies": {
     "@apollo/react-hooks": "3.0.0",
     "@reach/router": "^1.2.1",

@@ -27,7 +27,7 @@ const Div = styled('div')({
 });
 
 const A = styled('a')({
-  color: '#747790',
+  // color: '#747790',
   color: '#555',
   textDecoration: 'none',
   ':hover': {

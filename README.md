@@ -4,8 +4,12 @@ Based on [official Apollo Engine tutorial](https://www.apollographql.com/docs/tu
 
 ## Server
 
-Runs on NodeJS. Sources in `./server` folder.
+Works on NodeJS. Sources in `./server` folder.
+
+There is running instance of the [Server on Heroku](https://apollo-tutorial-server.herokuapp.com/)
 
 ## Client
 
 Built using ReactJS. Sources in `./client` folder.
+
+There is running instance of the [Client on Heroku](https://apollo-tutorial.herokuapp.com/)
