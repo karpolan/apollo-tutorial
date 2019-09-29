@@ -14,11 +14,13 @@ import injectStyles from './styles';
 
 // Set up our apollo-client to point at the server we created
 // this can be local or a remote endpoint
+console.log('APOLLO_SERVER_URI', process.env.REACT_APP_APOLLO_SERVER_URI);
+// console.log('ENGINE_API_KEY', process.env.REACT_APP_ENGINE_API_KEY);
 const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: 'http://localhost:4000/graphql',
+    uri: process.env.REACT_APP_APOLLO_SERVER_URI,
     headers: {
       authorization: localStorage.getItem('token'),
       'client-name': 'Space Explorer [web]',
@@ -59,9 +61,8 @@ function IsLoggedIn() {
 
 injectStyles();
 ReactDOM.render(
-
   <ApolloProvider client={client}>
     <IsLoggedIn />
   </ApolloProvider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );

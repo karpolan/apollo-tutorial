@@ -8,16 +8,17 @@ import { ReactComponent as Logo } from '../assets/logo.svg';
 import { ReactComponent as Curve } from '../assets/curve.svg';
 import { ReactComponent as Rocket } from '../assets/rocket.svg';
 import { colors, unit } from '../styles';
+import Info from './info';
 
 export default class LoginForm extends Component {
   state = { email: '' };
 
-  onChange = event => {
+  onChange = (event) => {
     const email = event.target.value;
-    this.setState(s => ({ email }));
+    this.setState((s) => ({ email }));
   };
 
-  onSubmit = event => {
+  onSubmit = (event) => {
     event.preventDefault();
     this.props.login({ variables: { email: this.state.email } });
   };
@@ -42,6 +43,9 @@ export default class LoginForm extends Component {
           />
           <Button type="submit">Log in</Button>
         </StyledForm>
+        <Footer>
+          <Info />
+        </Footer>
       </Container>
     );
   }
@@ -56,7 +60,7 @@ const Container = styled('div')({
   flexDirection: 'column',
   alignItems: 'center',
   flexGrow: 1,
-  paddingBottom: unit * 6,
+  _paddingBottom: unit * 6,
   color: 'white',
   backgroundColor: colors.primary,
   backgroundImage: `url(${space})`,
@@ -117,4 +121,13 @@ const StyledInput = styled('input')({
   ':focus': {
     borderColor: colors.primary,
   },
+});
+
+const Footer = styled('footer')({
+  width: '100%',
+  marginTop: 'auto',
+  backgroundColor: 'white',
+  color: colors.textSecondary,
+  position: 'sticky',
+  bottom: 0,
 });

@@ -7,6 +7,7 @@ import { ReactComponent as HomeIcon } from '../assets/icons/home.svg';
 import { ReactComponent as CartIcon } from '../assets/icons/cart.svg';
 import { ReactComponent as ProfileIcon } from '../assets/icons/profile.svg';
 import { colors, unit } from '../styles';
+import Info from './info';
 
 export default function Footer() {
   return (
@@ -26,6 +27,7 @@ export default function Footer() {
         </MenuItem>
         <LogoutButton />
       </InnerContainer>
+      <Info />
     </Container>
   );
 }
@@ -48,5 +50,6 @@ const InnerContainer = styled('div')({
   alignItems: 'center',
   maxWidth: 460,
   padding: unit * 2.5,
+  paddingBottom: unit,
   margin: '0 auto',
 });

@@ -1,3 +1,6 @@
+console.log('PORT:', process.env.PORT);
+console.log('ENGINE_API_KEY:', process.env.ENGINE_API_KEY);
+
 const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema');
 const { createStore } = require('./utils');
@@ -7,9 +10,6 @@ const LaunchAPI = require('./datasources/launch');
 const UserAPI = require('./datasources/user');
 
 const isEmail = require('isemail');
-
-const dotenv = require('dotenv');
-const config = dotenv.config(); // upadtes process.env.XYZ varibales
 
 const store = createStore();
 
@@ -33,11 +33,10 @@ const server = new ApolloServer({
     userAPI: new UserAPI({ store }),
   }),
   engine: {
-    apiKey: process.env.ENGINE_API_KEY, // 'service:karpolan-apollo-fullstack-tutorial:axYRUtQgCfzgFhdDnQ-QMQ',
+    apiKey: process.env.ENGINE_API_KEY, // 'service:abcde:s2D3f4sDfS-dfd',
   },
 });
 
-server.listen().then(({ url }) => {
-  // console.log('ENGINE_API_KEY:', process.env.ENGINE_API_KEY);
+server.listen({ port: process.env.PORT || 1234 }).then(({ url }) => {
   console.log(`Apollo Server ready at ${url}`);
 });
