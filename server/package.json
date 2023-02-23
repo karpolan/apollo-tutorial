@@ -19,7 +19,7 @@
     "graphql": "^14.7.0",
     "isemail": "^3.2.0",
     "nodemon": "^2.0.20",
-    "sequelize": "^4.44.4",
+    "sequelize": "^6.28.2",
     "sqlite3": "^4.2.0"
   },
   "devDependencies": {
